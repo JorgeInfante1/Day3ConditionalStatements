@@ -10,10 +10,10 @@ public class ConditionalStatement {
 		char answer = 'y';
 		//Object Declaration 
 		Scanner input = new Scanner(System.in);
+		do {
+				System.out.println("Input a number: ");
+				number = input.nextInt();
 		
-		System.out.println("Input a number: ");
-		number = input.nextInt();
-		//do {
 				if (number%2==1)
 				{
 					System.out.println("Weird");
@@ -30,9 +30,9 @@ public class ConditionalStatement {
 				{
 					System.out.println("Not Weird");
 				}
-				//System.out.println("You wish to input another number (y/n): ");
-				//answer = input.next
-			//}while(answer == 'n');
+				System.out.println("You wish to input another number (y/n): ");
+				answer = input.next().charAt(0);
+			}while(answer == 'y');
 
 	}
 
